@@ -65,11 +65,21 @@ html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
+
+@supports not (-webkit-touch-callout: none) {
 @media screen and (max-width: 1000px) and (orientation: portrait){
 #everything { position: absolute; zoom: 130%;
-	left:0px;
-	top:0px; }
-}
+	left:105px;
+	top:60px; }
+}}
+@supports (-webkit-touch-callout: none) {
+@media screen and (max-width: 1000px) and (orientation: portrait){
+#everything { position: absolute; zoom: 130%;
+	left:105px;
+	top:60px; }
+html{-webkit-text-size-adjust: 125%; text-size-adjust: 125%;}
+}}
+
 @media screen and (min-width: 1700px) and (orientation: landscape){
 #everything { position: absolute; zoom: 130%;
 	left:240px;
